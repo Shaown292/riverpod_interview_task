@@ -9,9 +9,10 @@ class SectionHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-        Text(subtitle, style: TextStyle(fontSize: 12, color: Colors.grey)),
+        Text(title, style: Theme.of(context).textTheme.bodyLarge,),
         SizedBox(height: 8),
+        Text(subtitle, style: Theme.of(context).textTheme.bodyMedium),
+
       ],
     );
   }

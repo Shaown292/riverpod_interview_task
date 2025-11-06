@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_interview_task/features/bottom_nav/presentation/bottom_nav_screen.dart';
 
 import 'core/theme/app_theme.dart';
 import 'features/home/presentation/home_page.dart';
@@ -23,7 +24,7 @@ class MyApp extends ConsumerWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: themeMode,
-      home: const HomePage(),
+      home: const BottomNavPage(),
     );
   }
 }

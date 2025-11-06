@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_color.dart';
 
 /// Current theme mode provider (Light/Dark/System)
@@ -20,9 +21,26 @@ final lightThemeProvider = Provider<ThemeData>((ref) {
       onBackground: AppColors.textPrimary,
       onSurface: AppColors.textPrimary,
     ),
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: AppColors.textPrimary),
-      bodyMedium: TextStyle(color: AppColors.textPrimary),
+    textTheme:  TextTheme(
+      bodyLarge: GoogleFonts.inter(
+        color: AppColors.textPrimary,
+        fontSize: 24,
+        fontWeight: FontWeight.w700
+      ),
+      bodyMedium: GoogleFonts.inter(
+          color: AppColors.textPrimary,
+          fontSize: 16,
+          fontWeight: FontWeight.w500
+      ),
+      bodySmall: GoogleFonts.inter(
+          color: AppColors.textPrimary,
+          fontSize: 14
+      ),
+      labelMedium: GoogleFonts.inter(
+          color: AppColors.textPrimary.withOpacity(0.6),
+          fontSize: 12,
+        
+      ),
     ),
   );
 });
